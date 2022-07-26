@@ -10,7 +10,7 @@ set -a
 
 # Source environment variables
 ENVFILES=".env" # Separate entries with spaces
-for envfile in "$ENVFILES" ; do
+for envfile in "$ENVFILES"; do
     [ -f "$envfile" ] && . "$envfile"
 done
 
