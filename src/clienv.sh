@@ -8,6 +8,9 @@
 # Export all env vars found for use by CLI commands
 set -a
 
+# Set current directory before we start moving into parent dirs
+CURRENT_DIR="$(pwd)"
+
 # Source environment variables
 ENVFILES=".env" # Separate entries with spaces
 for envfile in "$ENVFILES"; do
@@ -24,6 +27,7 @@ for envfile in "$ENVFILES"; do
             fi
         fi
     done
+    cd "$CURRENT_DIR" || exit 1
 done
 
 # Execute the remaining commands

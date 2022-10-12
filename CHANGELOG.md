@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.2.1 (2022-10-12)
+
+- Save the current directory before moving to parent directories so we can return to it once done traversing up parent paths
+
 ## v0.2.0 (2022-10-12)
 
 - Recursively search up through parent directories for `.env` files when a local copy cannot be found
